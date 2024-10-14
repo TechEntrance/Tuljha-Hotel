@@ -1,7 +1,8 @@
+# Access on : - https://tuljha.netlify.app/
+
 # 🌟 Tuljha Hotel 🌟
 
 Welcome to **Tuljha Hotel**, a hotel management dashboard for managing and tracking expenses, orders, and organizational food bills. This project is built with **Django** and provides a comprehensive dashboard for monitoring daily activities, generating invoices, and analyzing monthly profits and expenses. 🎉
-
 ---
 
 ## 🌐 Project Overview
