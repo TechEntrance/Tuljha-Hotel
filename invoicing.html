@@ -7,6 +7,7 @@
     <title>Invoice Management</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
     <link rel="stylesheet" href="/asset/css/style.css" />
+    <link rel="stylesheet" href="/asset/css/invoice.css" />
   </head>
   <body>
     <div class="container">
@@ -42,9 +43,9 @@
             <span class="material-icons-sharp"> money_off </span>
             <h3>Expenses</h3>
           </a>
-          <a href="reports.html">
+          <a href="Reminder.html">
             <span class="material-icons-sharp"> assessment </span>
-            <h3>Reports</h3>
+            <h3>Reminder</h3>
           </a>
           <a href="profile.html">
             <span class="material-icons-sharp"> settings </span>
@@ -53,22 +54,33 @@
         </div>
       </aside>
 
-      <main>
-        <h1>Invoice Management</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Organization</th>
-              <th>Total Amount</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="invoice-table-body">
-            <!-- Invoices will be populated here -->
-          </tbody>
-        </table>
-      </main>
+        <main>
+          <form id="invoice-form" class="form-container">
+            <h1>Invoicing System</h1>
+            <p>Generate and send monthly invoices to organizations. Track paid and unpaid invoices.</p>
+            
+            <h2 class="section-title">Generate Invoice</h2>
+        
+            <label for="organization">Select Organization:</label>
+            <select id="organization" required>
+              <!-- Options will be populated here -->
+            </select>
+        
+            <label for="invoice-date">Invoice Date:</label>
+            <input type="date" id="invoice-date" required />
+        
+            <label for="invoice-amount">Invoice Amount:</label>
+            <input type="number" id="invoice-amount" required />
+        
+            <label for="status">Status:</label>
+            <select id="status" required>
+              <option value="paid">Paid</option>
+              <option value="unpaid">Unpaid</option>
+            </select>
+        
+            <button type="submit">Generate Invoice</button>
+          </form>
+        </main>
 
       <div class="right">
         <div class="top">
@@ -93,5 +105,6 @@
     </div>
 
     <script src="/asset/js/index.js"></script>
+    <script src="/asset/js/invoice.js"></script>
   </body>
 </html>

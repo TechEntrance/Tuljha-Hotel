@@ -1,0 +1,72 @@
+/* Centering the form */
+main {
+  display: flex;
+  justify-content: center;   /* Centers horizontally */
+  align-items: center;       /* Centers vertically */
+  min-height: 100vh;         /* Ensures it takes full viewport height */
+  background-color: var(--color-background);
+}
+
+form#invoice-form {
+  background-color: var(--color-background);
+  padding: var(--padding-1);
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+form#invoice-form label {
+  color: var(--color-dark-variant);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+form#invoice-form select,
+form#invoice-form input {
+  width: 100%;
+  padding: var(--padding-1);
+  border-radius: var(--border-radius-1);
+  border: 1px solid var(--color-info-light);
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  font-size: 1rem;
+  transition: border-color 0.3s ease-in-out;
+}
+
+form#invoice-form select:focus,
+form#invoice-form input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+form#invoice-form button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--padding-1);
+  border-radius: var(--border-radius-2);
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+form#invoice-form button:hover {
+  background-color: var(--color-primary-variant);
+}
+
+form#invoice-form button:active {
+  background-color: var(--color-primary-variant);
+  transform: scale(0.98);
+}
+
+form#invoice-form input[type="number"]::-webkit-inner-spin-button,
+form#invoice-form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
